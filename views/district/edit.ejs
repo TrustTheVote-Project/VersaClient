@@ -1,0 +1,40 @@
+<html>
+<%- include('../head'); %>
+
+    <header>
+        <%- include('../nav'); %>
+    </header>
+
+    <body>
+        <h2><%= "District" %> </h2>
+        <form>
+            <div>
+               <label for="name" class="form-label">Name</label>
+               <input type="text" class="form-control" id="name"> 
+            </div> 
+            <div>
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" id="type">
+                    <option selected></option>
+                    <option>city</option>
+                    <option>county</option>
+                    <option>district</option>
+                </select>
+            </div>
+            <div>
+                <label for="contact-info" class="form-label">Contact Info</label>
+                <textarea class="form-control" id="contact-info" rows="4"></textarea>
+            </div>
+            <div>
+                <label for="mail-only" class="form-label">Is Mail-in Only?</label>
+                <input type="checkbox" class="form-check-input" id="mail-only">
+                <label class="form-check-label" for="mail-only">Yes</label>
+            </div>
+            <div>
+                <a href="#" class="link-danger">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </body>
+
+</html>

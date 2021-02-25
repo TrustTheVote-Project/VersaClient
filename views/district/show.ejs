@@ -1,0 +1,49 @@
+<html>
+<%- include('../head'); %>
+
+    <header>
+        <%- include('../nav'); %>
+    </header>
+
+    <body>
+        <h2>
+            <%= district && district.name %>
+        </h2>
+        <div>
+            <div>
+                <label class="form-label">ID</label>
+                <p>
+                    <%= district.external_id %>
+                </p>
+            </div>
+            <div>
+                <label class="form-label">Name</label>
+                <p><%= district.name %></p>
+            </div>
+            <div>
+                <label class="form-label">Type</label>
+                <p><%= district.type %></p>
+            </div>
+            <div>
+                <label class="form-label">Contact Info</label>
+                <p><%= district.contact_information %></p>
+            </div>
+            <div>
+                <label class="form-label">Mail Only?</label>
+                <p><%= district.mail_only ? 'Yes' : 'No' %></p>
+            </div>
+            <div>
+                <label class="form-label">Is District?</label>
+                <p><%= district.is_district ? 'Yes' : 'No' %></p>
+            </div>
+            <div>
+                <label class="form-label">Elections</label>
+                <a href="<%= `districts/${district.external_id}/elections/new` %>" class="btn btn-primary" tabindex="-1" role="button" >Create Election</a>
+            </div>
+            <div>
+                <button href="#" class="btn btn-primary">Edit</button>
+            </div>
+        </div>
+    </div>
+
+</html>

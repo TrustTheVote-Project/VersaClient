@@ -1,0 +1,48 @@
+
+<html>
+    <%- include('../head'); %>
+    
+    <header>
+        <%- include('../nav'); %>
+    </header>
+
+    <body>
+        <h2>Districts</h2>
+        <div>
+            <a href="districts/new" class="btn btn-primary" tabindex="-1" rolse="button">Create District</a>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% districts.forEach((district)=> { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `districts/${district.external_id}` %>">
+                                <%= district.external_id %>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="<%= `districts/${district.external_id}` %>">
+                                <%= district.name %>
+                            </a>
+                        </td>
+                        <td>
+                            <%= district.type %>
+                        </td>
+                        <td><i class="bi bi-x-circle-fill"></i></td>
+                    </tr> 
+                <% }) %>
+            </tbody>
+        </table>
+
+    </body>
+
+</html>
+
