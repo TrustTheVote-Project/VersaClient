@@ -1,0 +1,47 @@
+<h2 class=".mat-h2 .mat-title"></h2>
+
+<mat-grid-list cols="2">
+  <mat-grid-tile>
+    THIS IS FOR DISTRICT INFO
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <table mat-table [dataSource]="dataSource" mat-sort>
+      <!-- TODO: TURN ELECTIONS INTO LINKS -->
+      <!-- External ID -->
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let election">{{election.id}}</td>
+      </ng-container>
+
+      <!-- Name -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let election">{{election.name}}</td>
+      </ng-container>
+
+      <!-- Dates -->
+      <ng-container matColumnDef="dates">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let election">{{election.start_date}}-{{election.end_date}}</td>
+      </ng-container>
+ 
+      <!-- District -->
+      <ng-container matColumnDef="district">
+        <th mat-header-cell *matHeaderCellDef> District </th>
+        <td mat-cell *matCellDef="let election"> {{election.district.name}}</td> 
+      </ng-container>
+
+      <!-- TODO: STATUS COLUMN -->
+      <!-- TODO: DELETE COLUMN-->
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay" (click)="onRowClicked(row)"></tr>
+
+    <!-- no data -->
+    <tr class="mat-row" *matNoDataRow>
+        <td class="mat-call" colspan="4">No Elections</td>
+    </tr>    
+
+    </table>
+  </mat-grid-tile>
+</mat-grid-list>
