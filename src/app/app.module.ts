@@ -24,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { ElectionsComponent } from './elections/elections.component';
 
 
 
@@ -31,7 +32,8 @@ import { MatSortModule } from '@angular/material/sort';
   declarations: [
     AppComponent,
     NavigationComponent,
-    ElectoralDistrictComponent
+    ElectoralDistrictComponent,
+    ElectionsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ElectionDataSource } from '../election-data-source';
-import { ElectionService } from '../election.service';
 
 @Component({
   selector: 'app-electoral-district',
@@ -14,27 +12,20 @@ export class ElectoralDistrictComponent implements OnInit {
     name: 'Gadget County'
   };
   
-  dataSource: ElectionDataSource;
-  columnsToDisplay: string[] = ['id', 'name', 'district', 'dates'];
+ 
 
-  constructor(private electionService: ElectionService) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.getDistrict();
-    this.dataSource = new ElectionDataSource(this.electionService);
-    this.dataSource.loadElections();
+
   }
 
   getDistrict(): void {
-    // return this.district;
+    // TODO: Get main dashboard info 
     console.log('get initial district info');
   }
 
-  onRowClicked(): void {
-    // TODO: route to election page 
-    console.log('row clicked');
-    return;
-  }
 
 
 
