@@ -8,7 +8,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { ElectoralDistrictComponent } from './electoral-district/electoral-district.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // SIMULATE DATA SERVER
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -32,7 +32,7 @@ import { ElectionsComponent } from './elections/elections.component';
   declarations: [
     AppComponent,
     NavigationComponent,
-    ElectoralDistrictComponent,
+    DashboardComponent,
     ElectionsComponent
   ],
   imports: [

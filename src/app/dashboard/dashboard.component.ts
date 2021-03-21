@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-electoral-district',
-  templateUrl: './electoral-district.component.html',
-  styleUrls: ['./electoral-district.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 
-export class ElectoralDistrictComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   district = {
     id: '1', 
     name: 'Gadget County'
