@@ -7,9 +7,8 @@ import { ElectionService } from './election.service';
  
 
 export class ElectionDataSource implements DataSource<Election>{  
-    
     private electionsSubject = new BehaviorSubject<Election[]>([]);
-    
+
     constructor(private electionsService: ElectionService) {}
 
     connect(collectionViewer: CollectionViewer): Observable<Election[]> {
@@ -25,4 +24,6 @@ export class ElectionDataSource implements DataSource<Election>{
             .pipe(catchError(() => of([])))
             .subscribe(elections => this.electionsSubject.next(elections));
     }
+
+
 }

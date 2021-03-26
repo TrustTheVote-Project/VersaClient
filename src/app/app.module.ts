@@ -8,7 +8,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 // SIMULATE DATA SERVER
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -25,15 +24,24 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { ElectionsComponent } from './elections/elections.component';
-
-
+import { DashComponent } from './dash/dash.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ElectionDetailComponent } from './election-detail/election-detail.component';
+import { ContestsComponent } from './contests/contests.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { ElectionInfoComponent } from './election-info/election-info.component';
+import { ContestDetailComponent } from './contest-detail/contest-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    DashboardComponent,
-    ElectionsComponent
+    ElectionsComponent,
+    DashComponent,
+    ElectionDetailComponent,
+    ContestsComponent,
+    ElectionInfoComponent,
+    ContestDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,9 @@ import { ElectionsComponent } from './elections/elections.component';
     MatCardModule,
     MatMenuModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatCheckboxModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

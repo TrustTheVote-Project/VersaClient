@@ -4,15 +4,15 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Gadget County</mat-toolbar> <!-- TODO: GET CURRENT JURSIDICTION -->
+    <mat-toolbar>Gadget County</mat-toolbar> <!-- TODO: GET CURRENT JURSIDICTION & update breadcrumbs based on view -->
     <mat-nav-list>
+      <a mat-list-item href="#">Home</a>
       <a mat-list-item href="#">Districts</a>
       <a mat-list-item href="#">Precints</a>
-      <a mat-list-item href="#">Elections</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <!-- <mat-toolbar color="primary" id="title-toolbar">
+    <mat-toolbar color="primary" id="title-toolbar">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -21,8 +21,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span></span> 
-    </mat-toolbar> -->
+      <span><h1 class="mat-h1">Gadget County</h1></span> 
+    </mat-toolbar>
     <!-- Add Content Here -->
   <router-outlet></router-outlet>
   </mat-sidenav-content>

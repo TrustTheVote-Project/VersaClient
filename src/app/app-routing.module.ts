@@ -1,9 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashComponent } from './dash/dash.component';
+import { ElectionDetailComponent } from './election-detail/election-detail.component';
+import { ContestDetailComponent } from './contest-detail/contest-detail.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent } // TODO: Add redirect link for '/district/:id' (For ELECTORAL DISTRICTS)
+  { path: '', component: DashComponent }, // TODO: Add redirect link for '/district/:id' (For ELECTORAL DISTRICTS)
+  { path: 'dahboard', redirectTo: '', pathMatch: 'full'},
+  { path: 'elections/:id', 
+    children: [
+      { path: '', component: ElectionDetailComponent },
+      { path: 'contests/:c_id', component: ContestDetailComponent }
+    ]
+  }
 ];
 
 @NgModule({

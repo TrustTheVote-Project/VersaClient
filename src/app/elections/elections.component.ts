@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectionModel } from '@angular/cdk/collections';
+
 import { ElectionDataSource } from '../election-data-source';
 import { ElectionService } from '../election.service';
 
+import { Election } from '../election'
+;
 @Component({
   selector: 'app-elections',
   templateUrl: './elections.component.html',
@@ -9,19 +13,40 @@ import { ElectionService } from '../election.service';
 })
 export class ElectionsComponent implements OnInit {
   dataSource: ElectionDataSource;
-  columnsToDisplay: string[] = ['id', 'name', 'district', 'dates'];
+  selection: SelectionModel<Election>;
+  columnsToDisplay: string[] = ['select', 'id', 'name', 'type', 'start_date', 'end_date', 'status'];
 
   constructor(private electionService: ElectionService) { }
 
   ngOnInit(): void {
+    this.selection = new SelectionModel<Election>(true, []);
     this.dataSource = new ElectionDataSource(this.electionService);
     this.dataSource.loadElections();
   }
 
-  onRowClicked(): void {
-    // TODO: route to election page 
-    console.log('row clicked');
-    return;
+  currentStatus(election):string {
+    const today = new Date();
+    const start_date = new Date(election.start_date);
+    const end_date = new Date(election.end_date);
+
+    if (start_date <= today && today <= end_date) {
+      return "running";
+    } else if (start_date > today) {
+      return "not yet started";
+    } else if (today > end_date) {
+      return "over";
+    }
   }
+
+  isAnySelected() {
+    return this.selection.selected.length > 0; 
+  }
+
+  // masterToggle() {
+  //   this.isAnySelected() ? this.selection.clear() : this.dataSource.data.forEach(row => this.selection.select(row));
+  // }
+
+
+
 
 }
