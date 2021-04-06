@@ -31,6 +31,9 @@ import { ContestsComponent } from './contests/contests.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ElectionInfoComponent } from './election-info/election-info.component';
 import { ContestDetailComponent } from './contest-detail/contest-detail.component';
+import { ContestInfoComponent } from './contest-info/contest-info.component';
+import { CandidatesComponent } from './candidates/candidates.component';
+import { BallotMeasureStatementsComponent } from './ballot-measure-statements/ballot-measure-statements.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { ContestDetailComponent } from './contest-detail/contest-detail.componen
     ContestsComponent,
     ElectionInfoComponent,
     ContestDetailComponent,
+    ContestInfoComponent,
+    CandidatesComponent,
+    BallotMeasureStatementsComponent,
   ],
   imports: [
     BrowserModule,

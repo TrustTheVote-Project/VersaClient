@@ -4,13 +4,13 @@ export interface Contest {
     ballot_title?: string,
     ballot_subtitle?: string,
     district: any // TODO: District interface
-
+    type: string // canddiate or ballot measure? 
     // Candidate 
     // TODO
     // Party and Office and votes allowed?
 
     // Ballot Measure
-    type?: string,
+    measure_type?: string,
     full_text?: string,
     info_uri?: string, // url
     summary?: string,

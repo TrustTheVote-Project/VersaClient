@@ -1,1 +1,39 @@
-<p>contest-detail works!</p>
+<div class="grid-container">
+  <mat-grid-list cols="3" rowHeight="350px">
+    <mat-grid-tile colspan="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Info
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <app-contest-info [contest]="contest" ></app-contest-info>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            TODO - SWITCH CANDIDATES AND ANSWERS 
+            <button mat-icon-button *ngIf="isCandidateContest()" class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <div></div>
+              <button mat-menu-item>Create Candidate</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <!-- <app-candidates *ngIf="isCandidateContest()"></app-candidates> -->
+          <div *ngIf="isCandidateContest()">HI CANDIDATES</div>
+          <app-ballot-measure-statements *ngIf="isBallotMeasure()"></app-ballot-measure-statements>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

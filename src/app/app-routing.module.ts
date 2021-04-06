@@ -4,13 +4,21 @@ import { DashComponent } from './dash/dash.component';
 import { ElectionDetailComponent } from './election-detail/election-detail.component';
 import { ContestDetailComponent } from './contest-detail/contest-detail.component';
 
+import { ContestResolverService } from './contest-resolver.service';
+
 const routes: Routes = [
   { path: '', component: DashComponent }, // TODO: Add redirect link for '/district/:id' (For ELECTORAL DISTRICTS)
   { path: 'dahboard', redirectTo: '', pathMatch: 'full'},
   { path: 'elections/:id', 
     children: [
       { path: '', component: ElectionDetailComponent },
-      { path: 'contests/:c_id', component: ContestDetailComponent }
+      { 
+        path: 'contests/:c_id',
+        component: ContestDetailComponent,
+        resolve: {
+          contest: ContestResolverService
+        }
+      }
     ]
   }
 ];

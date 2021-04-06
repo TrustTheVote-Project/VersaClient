@@ -1,0 +1,33 @@
+<div class="contest-info">
+    <div>
+        Name: {{ contest.name }}
+    </div>
+    <div>
+        ID: {{ contest.id }}
+    </div>
+    <div>
+        District: {{ contest.district.name}}
+    </div>
+    <div *ngIf="contest.ballot_title">
+        Ballot Title: {{ contest.ballot_title}}
+    </div>
+    <div *ngIf="contest.ballot_subtitle">
+        Ballot Subtitle: {{ contest.ballot_subtitle}}
+    </div>
+    <div *ngIf="contest.measure_type">
+        Measure Type: {{ contest.measure_type}}
+    </div>
+    <div *ngIf="contest.passage_threshold">
+        Threshold: {{ contest.passage_threshold}}
+    </div>
+    <div *ngIf="contest.info_uri">
+        URL: {{ contest.info_uri}}
+    </div>
+    <div *ngIf="contest.summary">
+        Summary {{ contest.summary}}
+    </div>
+    <div *ngIf="contest.full_text">
+        Full Text: {{ contest.full_text}}
+    </div>
+
+</div>

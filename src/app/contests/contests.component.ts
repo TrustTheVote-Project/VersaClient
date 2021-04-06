@@ -17,7 +17,7 @@ export class ContestsComponent implements OnInit {
 
   dataSource: ContestDataSource;
   selection: SelectionModel<Contest>
-  displayedColumns = ['select', 'id', 'name', 'district'];
+  displayedColumns = ['select', 'id', 'name', 'district', 'type'];
 
   constructor(
     private route: ActivatedRoute,
