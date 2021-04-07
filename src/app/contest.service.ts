@@ -6,6 +6,8 @@ import { catchError, tap } from 'rxjs/operators';
 import { Contest } from './contest';
 import { Candidate } from './candidate';
 
+import { CANDIDATES } from './mock-candidates';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -27,6 +29,20 @@ export class ContestService {
       );
   }
 
+  getContestCandidates(id: string): Observable<Candidate[]> {
+    console.log(`get contest ${id}'s candidates`);
+    const candidates = of(CANDIDATES);
+    return candidates;
+
+
+    // WHEN REAL SERVER ATTACHED
+    // const url = `${this.contestsUrl}/${id}/candidates`;
+    // return this.http.get<Candidate[]>(url)
+    //   .pipe(
+    //     tap(_ => console.log(`fetched contest ${id}'s candidates`)),
+    //     catchError(this.handleError<Candidate[]>('getContestCandidates, []'))
+    //   );
+  }
 
   private handleError<T>(operator = 'operation', result?: T) {
     return (error: any): Observable<T> => {
@@ -35,5 +51,8 @@ export class ContestService {
       return of(result as T);
     };
   }
+
+
+
 
 }

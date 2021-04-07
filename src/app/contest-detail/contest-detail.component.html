@@ -17,7 +17,7 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            TODO - SWITCH CANDIDATES AND ANSWERS 
+            {{ isCandidateContest() ? 'Candidates' : 'Ballot Statements'}}
             <button mat-icon-button *ngIf="isCandidateContest()" class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
@@ -29,8 +29,7 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <!-- <app-candidates *ngIf="isCandidateContest()"></app-candidates> -->
-          <div *ngIf="isCandidateContest()">HI CANDIDATES</div>
+          <app-candidates *ngIf="isCandidateContest()"></app-candidates>
           <app-ballot-measure-statements *ngIf="isBallotMeasure()"></app-ballot-measure-statements>
         </mat-card-content>
       </mat-card>

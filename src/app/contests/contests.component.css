@@ -8,4 +8,5 @@
 
 .full-width-table tr:hover {
     background: whitesmoke;
+    cursor: pointer;
 }
