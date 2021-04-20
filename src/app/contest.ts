@@ -14,7 +14,7 @@ export interface Contest {
     full_text?: string,
     info_uri?: string, // url
     summary?: string,
-    pro_statment?: string,
+    pro_statement?: string,
     con_statement?: string,
     effect_of_abstain?: string,
     passage_threshold?: number

@@ -51,8 +51,4 @@ export class ContestService {
       return of(result as T);
     };
   }
-
-
-
-
 }

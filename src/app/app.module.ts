@@ -34,6 +34,8 @@ import { ContestDetailComponent } from './contest-detail/contest-detail.componen
 import { ContestInfoComponent } from './contest-info/contest-info.component';
 import { CandidatesComponent } from './candidates/candidates.component';
 import { BallotMeasureStatementsComponent } from './ballot-measure-statements/ballot-measure-statements.component';
+import { BallotStatementsComponent } from './ballot-statements/ballot-statements.component';
+import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { BallotMeasureStatementsComponent } from './ballot-measure-statements/ba
     ContestInfoComponent,
     CandidatesComponent,
     BallotMeasureStatementsComponent,
+    BallotStatementsComponent,
+    CandidateDetailComponent,
   ],
   imports: [
     BrowserModule,

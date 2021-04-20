@@ -1,0 +1,48 @@
+<div class="grid-container">
+  <mat-grid-list cols="1" >
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Info
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Edit</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div class="candidate-info">
+            <div>
+              Name: {{ candidate.name }}
+            </div>
+            <div>
+              ID: {{ candidate.id }}
+            </div>
+            <div *ngIf="candidate.party">
+              Party: {{ candidate.party }}
+            </div>
+            <div *ngIf="candidate.slogan">
+              Slogan: {{ candidate.slogan }}
+            </div>
+            <div *ngIf="candidate.is_incumbent">
+              Incumbent?: {{ candidate.is_incumbent }}
+            </div>
+            <div *ngIf="candidate.is_top_ticket">
+              Top of Ticket?: {{ candidate.is_top_ticket }}
+            </div>
+            <div *ngIf="candidate.registration_status">
+              Registration Status: {{ candidate.registration_status }}
+            </div>
+            <div *ngIf="candidate.conatact_info">
+              Contact Info: {{ candidate.conatact_info }}
+            </div>
+              
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

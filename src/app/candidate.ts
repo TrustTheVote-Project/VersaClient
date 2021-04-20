@@ -3,7 +3,7 @@ export interface Candidate {
     name: string, 
     slogan?: string,
     conatact_info?: any,
-    is_incumbant?: boolean,
+    is_incumbent?: boolean,
     is_top_ticket?: boolean,
     party?: string,
     registration_status?: string

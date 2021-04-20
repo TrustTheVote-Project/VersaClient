@@ -29,9 +29,4 @@ export class ContestDetailComponent implements OnInit {
   isCandidateContest(): boolean {
     return this.contest.type === 'candidate';
   }
-
-  isBallotMeasure(): boolean {
-    return this.contest.type === 'ballot_measure';
-  }
-
 }
