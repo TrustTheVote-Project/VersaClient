@@ -7,15 +7,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
-import { ContestDetailComponent } from './contest-detail.component';
+import { BallotMeasureComponent } from './ballot-measure.component';
 
-describe('ContestDetailComponent', () => {
-  let component: ContestDetailComponent;
-  let fixture: ComponentFixture<ContestDetailComponent>;
+describe('BallotMeasureComponent', () => {
+  let component: BallotMeasureComponent;
+  let fixture: ComponentFixture<BallotMeasureComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ContestDetailComponent],
+      declarations: [BallotMeasureComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -29,7 +29,7 @@ describe('ContestDetailComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContestDetailComponent);
+    fixture = TestBed.createComponent(BallotMeasureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

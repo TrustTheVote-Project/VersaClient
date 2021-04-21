@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashComponent } from './dash/dash.component';
 import { ElectionDetailComponent } from './election-detail/election-detail.component';
-import { ContestDetailComponent } from './contest-detail/contest-detail.component';
-
+import { CandidateDetailComponent} from './candidate-detail/candidate-detail.component';
+import { CommonContestComponent } from './common-contest/common-contest.component';
 import { ContestResolverService } from './contest-resolver.service';
-import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
 
 const routes: Routes = [
   { path: '', component: DashComponent }, // TODO: Add redirect link for '/district/:id' (For ELECTORAL DISTRICTS)
@@ -18,7 +17,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: ContestDetailComponent,
+            component: CommonContestComponent,
             resolve: {
               contest: ContestResolverService
             }

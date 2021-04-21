@@ -30,12 +30,12 @@ import { ElectionDetailComponent } from './election-detail/election-detail.compo
 import { ContestsComponent } from './contests/contests.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ElectionInfoComponent } from './election-info/election-info.component';
-import { ContestDetailComponent } from './contest-detail/contest-detail.component';
+import { CandidateContestDetailComponent } from './candidate-contest-detail/candidate-contest-detail.component';
 import { ContestInfoComponent } from './contest-info/contest-info.component';
 import { CandidatesComponent } from './candidates/candidates.component';
-import { BallotMeasureStatementsComponent } from './ballot-measure-statements/ballot-measure-statements.component';
-import { BallotStatementsComponent } from './ballot-statements/ballot-statements.component';
 import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
+import { CommonContestComponent } from './common-contest/common-contest.component';
+import { BallotMeasureComponent } from './ballot-measure/ballot-measure.component';
 
 @NgModule({
   declarations: [
@@ -46,12 +46,12 @@ import { CandidateDetailComponent } from './candidate-detail/candidate-detail.co
     ElectionDetailComponent,
     ContestsComponent,
     ElectionInfoComponent,
-    ContestDetailComponent,
+    CandidateContestDetailComponent,
     ContestInfoComponent,
     CandidatesComponent,
-    BallotMeasureStatementsComponent,
-    BallotStatementsComponent,
     CandidateDetailComponent,
+    CommonContestComponent,
+    BallotMeasureComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<div>
+    <app-contest-detail *ngIf="isCandidateContest()"
+        [contest]="contest">        
+    </app-contest-detail>
+    <ng-template  #elseBlock >
+        <app-ballot-measure [contest]="contest"> </app-ballot-measure>
+    </ng-template>
+</div>
