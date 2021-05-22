@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Election } from '../election';
@@ -9,24 +9,24 @@ import { ElectionService } from '../election.service';
   templateUrl: './election-info.component.html',
   styleUrls: ['./election-info.component.css']
 })
-export class ElectionInfoComponent {
-  @Input() election: Election;
-  // id: string;
+export class ElectionInfoComponent implements OnInit {
+  election: Election;
+  id: string;
 
   constructor(
-    // private route: ActivatedRoute,
-    // private electionService: ElectionService,
+    private route: ActivatedRoute,
+    private electionService: ElectionService,
   ) { }
 
-  // ngOnInit(): void {
-  //   this.id = this.route.snapshot.paramMap.get('id');
-  //   this.getElection();
-  // }
+  ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.getElection();
+  }
 
-  // getElection(): void {
-  //   this.electionService.getElection(this.id)
-  //     .subscribe(election => this.election = election);
-  // }
+  getElection(): void {
+    this.electionService.getElection(this.id)
+      .subscribe(election => this.election = election);
+  }
 
 
 }

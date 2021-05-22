@@ -5,20 +5,13 @@ import { ElectionDetailComponent } from './election-detail/election-detail.compo
 import { CandidateDetailComponent} from './candidate-detail/candidate-detail.component';
 import { CommonContestComponent } from './common-contest/common-contest.component';
 import { ContestResolverService } from './contest-resolver.service';
-import { ElectionResolverService } from './election-resolver.service';
-import { CandidateResolverService } from './candidate-resolver.service';
 
 const routes: Routes = [
-  { path: '', component: DashComponent }, 
-  { path: 'dahboard', redirectTo: '', pathMatch: 'full'}, // change name to elections?
+  { path: '', component: DashComponent }, // TODO: Add redirect link for '/district/:id' (For ELECTORAL DISTRICTS)
+  { path: 'dahboard', redirectTo: '', pathMatch: 'full'},
   { path: 'elections/:id', 
     children: [
-      { path: '', 
-      component: ElectionDetailComponent,
-      resolve: {
-        election: ElectionResolverService
-      }
-    },
+      { path: '', component: ElectionDetailComponent },
       { 
         path: 'contests/:c_id',
         children: [
@@ -31,10 +24,7 @@ const routes: Routes = [
           },
           {
             path:'candidates/:cd_id',
-            component: CandidateDetailComponent,
-            resolve: {
-              candidate: CandidateResolverService
-            }
+            component: CandidateDetailComponent
           }
         ],
       }

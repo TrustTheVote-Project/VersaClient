@@ -3,8 +3,6 @@ import { Location } from '@angular/common';
 
 import { map } from 'rxjs/operators';
 
-import { Election } from '../election';
-import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -13,17 +11,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./election-detail.component.css']
 })
 
-export class ElectionDetailComponent implements OnInit {
-  election: Election;
+export class ElectionDetailComponent {
 
   constructor(
-    private route: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {  
-    this.route.data.subscribe((data: { election: Election}) => {
-      console.log('show election');
-      this.election = data.election;
-    });
-  }
+  ngOnInit(): void {  }
+
+
 }

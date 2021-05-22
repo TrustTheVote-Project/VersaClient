@@ -15,21 +15,17 @@ export class CandidateDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    // private candidateService: CandidateService,
+    private candidateService: CandidateService,
   ) { }
 
   ngOnInit() {
-    // this.id = this.route.snapshot.paramMap.get('cd_id');
-    // this.getCandidate();
-    this.route.data.subscribe((data: { candidate: Candidate }) => { 
-      console.log('show candidate');
-      this.candidate = data.candidate;
-    });
+    this.id = this.route.snapshot.paramMap.get('cd_id');
+    this.getCandidate();
   }
 
-  // getCandidate(): void {
-  //   this.candidateService.getCandidate(this.id).subscribe(candidate => this.candidate = candidate)
-  // }
+  getCandidate(): void {
+    this.candidateService.getCandidate(this.id).subscribe(candidate => this.candidate = candidate)
+  }
 
 
 }
