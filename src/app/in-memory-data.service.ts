@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-import { Election } from './election';
-import { Contest } from './contest';
-import { Candidate } from './candidate';
+import { Election } from './elections/election';
+import { Contest } from './contests/contest';
+import { Candidate } from './candidates/candidate';
 
 @Injectable({
   providedIn: 'root'

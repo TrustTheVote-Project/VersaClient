@@ -7,6 +7,11 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { ElectionsModule } from './elections/elections.module';
+import { ContestsModule } from './contests/contests.module';
+import { CandidatesModule } from './candidates/candidates.module';
+
 import { NavigationComponent } from './navigation/navigation.component';
 
 // SIMULATE DATA SERVER
@@ -18,50 +23,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
-import { MatSortModule } from '@angular/material/sort';
-import { ElectionsComponent } from './elections/elections.component';
-import { DashComponent } from './dash/dash.component';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ElectionDetailComponent } from './election-detail/election-detail.component';
-import { ContestsComponent } from './contests/contests.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { ElectionInfoComponent } from './election-info/election-info.component';
-import { CandidateContestDetailComponent } from './candidate-contest-detail/candidate-contest-detail.component';
-import { ContestInfoComponent } from './contest-info/contest-info.component';
-import { CandidatesComponent } from './candidates/candidates.component';
-import { CandidateDetailComponent } from './candidate-detail/candidate-detail.component';
-import { CommonContestComponent } from './common-contest/common-contest.component';
-import { BallotMeasureComponent } from './ballot-measure/ballot-measure.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavigationComponent,
-    ElectionsComponent,
-    DashComponent,
-    ElectionDetailComponent,
-    ContestsComponent,
-    ElectionInfoComponent,
-    CandidateContestDetailComponent,
-    ContestInfoComponent,
-    CandidatesComponent,
-    CandidateDetailComponent,
-    CommonContestComponent,
-    BallotMeasureComponent,
-  ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    // MOCK SERVER REMOVE WHEN HOOKED UP TO REAL ONE  
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -69,13 +36,24 @@ import { BallotMeasureComponent } from './ballot-measure/ballot-measure.componen
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
     MatTableModule,
-    MatSortModule,
-    MatCheckboxModule,
-    MatPaginatorModule
+
+    CandidatesModule,
+    ContestsModule,
+    ElectionsModule,
+    AppRoutingModule,
+    HttpClientModule,
+
+    // MOCK SERVER REMOVE WHEN HOOKED UP TO REAL ONE  
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
+    ContestsModule,
+    CandidatesModule,
+  ],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,8 @@
+<div>
+    <app-contest-candidate *ngIf="isCandidateContest()"
+        [contest]="contest">        
+    </app-contest-candidate>
+    <app-contest-ballot-measure *ngIf="!isCandidateContest()" 
+        [contest]="contest">
+    </app-contest-ballot-measure>
+</div>
