@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashComponent } from './dash/dash.component';
-import { ElectionsListComponent } from './elections-list/elections-list.component';
 import { ElectionComponent } from './election/election.component';
-
 import { ContestSwitchComponent } from '../contests/contest-switch/contest-switch.component';
-import { ContestResolverService } from '../contests/contest-resolver.service';
 import { CandidateDetailComponent } from '../candidates/candidate-detail/candidate-detail.component';
+
+import { ElectionResolverService } from './election-resolver.service';
+import { ContestResolverService } from '../contests/contest-resolver.service';
+import { CandidateResolverService } from '../candidates/candidate-resolver.service';
 
 
 const electionRoutes: Routes = [
@@ -15,7 +16,12 @@ const electionRoutes: Routes = [
   {
     path: 'elections/:id',
     children: [      
-      { path: '', component: ElectionComponent },
+      { path: '', 
+        component: ElectionComponent,
+        resolve: {
+          election: ElectionResolverService
+        }
+      },
       {
         path: 'contests/:c_id',
         children: [
@@ -28,7 +34,10 @@ const electionRoutes: Routes = [
           },
           {
             path: 'candidates/:cd_id',
-            component: CandidateDetailComponent
+            component: CandidateDetailComponent,
+            resolve: {
+              candidate: CandidateResolverService
+            }
           }
         ],
       }

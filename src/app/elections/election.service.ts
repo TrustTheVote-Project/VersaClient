@@ -13,7 +13,7 @@ import { CONTESTS } from '../contests/mock-contests';
 })
 export class ElectionService {
 
-  private electionsUrl = 'api/elections'; // should this include precinct? 
+  private electionsUrl = 'api/elections';  
 
   constructor(
     private http: HttpClient
