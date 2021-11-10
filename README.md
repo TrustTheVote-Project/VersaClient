@@ -12,7 +12,7 @@ For more on VersaClient, please see the [TrustTheVote-Project/VersaClient Wiki](
 
 ## Technologies Used
 
-VersaClient was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3., part of the Angular JavaScript Framework.
+VersaClient was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3., part of the [Angular](https://angular.io/) TypeScript application development framework.
 
 The VersaClient will connect to the [TrustTheVote-Project/VersaEDM-Backend](https://github.com/TrustTheVote-Project/VersaEDM-Backend) API to save and validate election data.
 
@@ -25,7 +25,7 @@ To run and develop VersaClient, you'll need to install:
 
 ## Working with Angular
 
-The Angular CLI includes several important tools used to develop the VersaClient.
+The [Angular CLI](https://github.com/angular/angular-cli) includes several important tools used to develop the VersaClient.
 
 ### Development server
 
