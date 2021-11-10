@@ -38,7 +38,7 @@ npm -v
 ng --version
 ```
 
-If these commands don't work, or produce errors, follow the steps in [Angular - Setting up the local environment and workspace](https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace) for your specific platform.
+If these commands don't work, or result in errors or the wrong version numbers, follow the steps in [Angular - Setting up the local environment and workspace](https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace) for your specific platform.
 
 If you want to contribute code to VersaClient, you'll want to use karma and protractor. See below for details on testing.
 

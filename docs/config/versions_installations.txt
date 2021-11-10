@@ -1,0 +1,175 @@
+ 2   master  ✔  node -v                                                                      ~/r/o/VersaClient 
+v15.14.0
+ 3   master  ✔  npm -v                                                                       ~/r/o/VersaClient 
+7.10.0
+ 4   master  ✔  ng --version                                                                 ~/r/o/VersaClient 
+Node.js version v15.14.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/.
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+    
+
+Angular CLI: 12.2.12
+Node: 15.14.0 (Unsupported)
+Package Manager: npm 7.10.0
+OS: linux x64
+
+Angular: <error>
+... animations, cdk, common, compiler, compiler-cli, core, forms
+... material, platform-browser, platform-browser-dynamic, router
+
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1202.12
+@angular-devkit/build-angular   <error>
+@angular-devkit/core            12.2.12
+@angular-devkit/schematics      12.2.12
+@angular/cli                    12.2.12
+@schematics/angular             12.2.12
+rxjs                            6.6.7
+typescript                      <error>
+    
+Warning: The current version of Node (15.14.0) is not supported by Angular.
+ 5   master  ✔  npm install -g @angular/cli                                             1s  ~/r/o/VersaClient 
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular/cli@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular-devkit/architect@0.1300.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular-devkit/core@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular-devkit/schematics@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@schematics/angular@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'pacote@12.0.2',
+npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || >=16' },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm ERR! code EACCES
+npm ERR! syscall rename
+npm ERR! path /usr/lib/node_modules/@angular/cli
+npm ERR! dest /usr/lib/node_modules/@angular/.cli-fAUK3V4x
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, rename '/usr/lib/node_modules/@angular/cli' -> '/usr/lib/node_modules/@angular/.cli-fAUK3V4x'
+npm ERR!  [Error: EACCES: permission denied, rename '/usr/lib/node_modules/@angular/cli' -> '/usr/lib/node_modules/@angular/.cli-fAUK3V4x'] {
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'rename',
+npm ERR!   path: '/usr/lib/node_modules/@angular/cli',
+npm ERR!   dest: '/usr/lib/node_modules/@angular/.cli-fAUK3V4x'
+npm ERR! }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/neil/.npm/_logs/2021-11-10T22_51_47_758Z-debug.log
+ 6   master  ✘  sudo npm install -g @angular/cli                                        5s  ~/r/o/VersaClient 
+[sudo] password for neil: 
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular/cli@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular-devkit/architect@0.1300.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular-devkit/core@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@angular-devkit/schematics@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@schematics/angular@13.0.1',
+npm WARN EBADENGINE   required: {
+npm WARN EBADENGINE     node: '^12.20.0 || ^14.15.0 || >=16.10.0',
+npm WARN EBADENGINE     npm: '^6.11.0 || ^7.5.6 || >=8.0.0',
+npm WARN EBADENGINE     yarn: '>= 1.13.0'
+npm WARN EBADENGINE   },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'pacote@12.0.2',
+npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || >=16' },
+npm WARN EBADENGINE   current: { node: 'v15.14.0', npm: '7.10.0' }
+npm WARN EBADENGINE }
+
+removed 40 packages, changed 195 packages, and audited 196 packages in 9s
+
+22 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice 
+npm notice New major version of npm available! 7.10.0 -> 8.1.3
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v8.1.3
+npm notice Run npm install -g npm@8.1.3 to update!
+npm notice 
