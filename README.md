@@ -40,6 +40,8 @@ ng --version
 
 If these commands don't work, or result in errors or the wrong version numbers, follow the steps in [Angular - Setting up the local environment and workspace](https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace) for your specific platform.
 
+Also, check out [Getting Started: Setup](https://github.com/TrustTheVote-Project/VersaClient/wiki/Getting-Started:-Setup) in the VersaClient Wiki.
+
 If you want to contribute code to VersaClient, you'll want to use karma and protractor. See below for details on testing.
 
 ## Working with Angular
