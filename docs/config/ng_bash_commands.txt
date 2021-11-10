@@ -1,0 +1,6 @@
+ng serve
+ng --version
+ng update
+ng update @angular/core
+ng update @angular/cli
+ng help

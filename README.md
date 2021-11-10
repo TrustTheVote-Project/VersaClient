@@ -12,16 +12,35 @@ For more on VersaClient, please see the [TrustTheVote-Project/VersaClient Wiki](
 
 ## Technologies Used
 
-VersaClient was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3., part of the [Angular](https://angular.io/) TypeScript application development framework.
+VersaClient was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3., part of the [Angular](https://angular.io/) TypeScript application development framework. Angular requires node.js and npm. See **Getting Started**, below, for details.
 
 The VersaClient will connect to the [TrustTheVote-Project/VersaEDM-Backend](https://github.com/TrustTheVote-Project/VersaEDM-Backend) API to save and validate election data.
 
 ## Getting Started
 
-To run and develop VersaClient, you'll need to install:
+To work with this repo, first create a fork and then clone the fork to your development workstation. If you just want to try it out, you can download the code from GitHub as a Zip archive.
 
+Once you have the contents of this repo on your development workstation, you'll need to install some software.
+
+To run and develop VersaClient, you'll need to [install Angular-CLI](https://angular.io/guide/setup-local#install-the-angular-cli). To get started, review the [Angular Local Setup: Prerequisites](https://angular.io/guide/setup-local#prerequisites)
+
+VersaClient requirements include:
+
+* node.js
 * npm
-* angular
+* angular-cli
+
+To see if you have the software installed correctly, enter the following commands at your terminal:
+
+```bash
+node -v
+npm -v
+ng --version
+```
+
+If these commands don't work, or produce errors, follow the steps in [Angular - Setting up the local environment and workspace](https://angular.io/guide/setup-local#setting-up-the-local-environment-and-workspace) for your specific platform.
+
+If you want to contribute code to VersaClient, you'll want to use karma and protractor. See below for details on testing.
 
 ## Working with Angular
 
