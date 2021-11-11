@@ -48,9 +48,9 @@ If you want to contribute code to VersaClient, you'll want to use karma and prot
 
 The [Angular CLI](https://github.com/angular/angular-cli) includes several important tools used to develop the VersaClient.
 
-### Development server
+### Run the Angular development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` to start a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Code scaffolding and generating components
 
